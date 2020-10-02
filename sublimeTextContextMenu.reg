@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\st]
+@="Sublime Text here"
+"Icon"="C:\\Program Files\\Sublime Text 3\\sublime_text.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\st\command]
+@="C:\\Program Files\\Sublime Text 3\\sublime_text.exe ."
