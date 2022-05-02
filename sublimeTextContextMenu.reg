@@ -8,7 +8,7 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Program Files\\Sublime Text\\sublime_text.exe\",0"
 
 [HKEY_CLASSES_ROOT\Directory\shell\sublime\command]
-@="\"C:\\Program Files\\Sublime Text\\sublime_text.exe\" \"%1\""
+@="\"C:\\Program Files\\Sublime Text\\sublime_text.exe\" -n \"%1\""
 
 
 ; This will make it appear when you right click INSIDE a folder
@@ -19,4 +19,9 @@ Windows Registry Editor Version 5.00
 "Icon"="\"C:\\Program Files\\Sublime Text\\sublime_text.exe\",0"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\sublime\command]
-@="\"C:\\Program Files\\Sublime Text\\sublime_text.exe\" \"%V\""
+@="\"C:\\Program Files\\Sublime Text\\sublime_text.exe\" -n \"%V\""
+
+; For file context menu
+
+[HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text\command]
+@="\"C:\\Program Files\\Sublime Text\\sublime_text.exe\" -n \"%1\""
