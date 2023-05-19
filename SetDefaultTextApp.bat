@@ -1,3 +1,4 @@
+rem requires https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/
 SetUserFTA .cpp Applications\sublime_text.exe
 SetUserFTA .cc Applications\sublime_text.exe
 SetUserFTA .c Applications\sublime_text.exe
