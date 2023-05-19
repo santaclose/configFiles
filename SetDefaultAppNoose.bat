@@ -1,3 +1,4 @@
+rem requires https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/
 SetUserFTA .png Applications\noose.exe
 SetUserFTA .jpg Applications\noose.exe
 SetUserFTA .jpeg Applications\noose.exe
