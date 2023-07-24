@@ -6,6 +6,7 @@ SetUserFTA .h Applications\ste.exe
 SetUserFTA .hpp Applications\ste.exe
 SetUserFTA .cs Applications\ste.exe
 SetUserFTA .py Applications\ste.exe
+SetUserFTA .java Applications\ste.exe
 SetUserFTA .obj Applications\ste.exe
 SetUserFTA .json Applications\ste.exe
 SetUserFTA .xml Applications\ste.exe
@@ -17,6 +18,7 @@ SetUserFTA .gltf Applications\ste.exe
 SetUserFTA .php Applications\ste.exe
 SetUserFTA .ini Applications\ste.exe
 SetUserFTA .js Applications\ste.exe
+SetUserFTA .qml Applications\ste.exe
 SetUserFTA .html Applications\ste.exe
 SetUserFTA .htm Applications\ste.exe
 SetUserFTA .css Applications\ste.exe
@@ -33,4 +35,7 @@ SetUserFTA .glsl Applications\ste.exe
 SetUserFTA .hlsl Applications\ste.exe
 SetUserFTA .shader Applications\ste.exe
 SetUserFTA .gitignore Applications\ste.exe
+SetUserFTA .gitmodules Applications\ste.exe
+SetUserFTA .log Applications\ste.exe
+SetUserFTA .sh Applications\ste.exe
 pause
