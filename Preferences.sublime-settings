@@ -1,8 +1,10 @@
 {
 	"word_wrap": true,
 	"font_face": "Fira Code",
-	"font_size": 8,
+	"font_size": 9,
 	"open_files_in_new_window": "always",
 	"show_encoding": true,
-	"default_line_ending" : "unix" 
+	"default_line_ending": "unix",
+	"hot_exit": false,
+	"remember_open_files": false
 }
