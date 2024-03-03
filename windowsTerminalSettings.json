@@ -1,0 +1,5 @@
+
+        {
+            "keys": "ctrl+backspace",
+            "command": { "action": "sendInput", "input": "\u0017" }
+        }
