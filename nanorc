@@ -1,0 +1,30 @@
+set tabsize 4
+set linenumbers
+set numbercolor yellow,normal
+set indicator   # side-bar for indicating cur position
+set smarthome   # Home jumps to line start first
+set afterends   # Ctrl+Right move to word ends instead of word starts
+set wordchars "_"   # recognize '_' as part of a word
+set zap             # delete selected text as a whole
+set historylog      # remember search history
+set multibuffer     # read files into multibuffer instead of insert
+set softwrap
+#set mouse       # enable mouse support
+
+unbind ^C main
+
+bind ^G gotoline main
+bind ^Z undo main
+bind ^Y redo main
+bind ^D findnext main
+bind ^F whereis main
+bind ^S writeout main
+bind ^] indent main
+bind ^\ unindent main
+bind ^C copy main
+bind ^V paste main
+bind ^/ comment main
+#bind ^Q exit main
+#bind ^C copytext main
+#bind ^X cut main
+#bind ^A findprev main
