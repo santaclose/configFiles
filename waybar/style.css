@@ -1,0 +1,21 @@
+* {
+	font-family: "Fira Sans";
+	font-size: 16px;
+}
+
+window#waybar {
+	background: rgba(20, 20, 20, 0.0);
+	color: #aaaaaa;
+}
+
+#pulseaudio {
+	padding: 2px 12px 4px 12px;
+}
+
+#clock {
+	padding: 2px 12px 4px 12px;
+}
+
+#network, #memory, #cpu {
+	padding: 2px 12px 4px 12px
+}

@@ -1,0 +1,36 @@
+{
+	"layer": "top",
+	"position": "bottom",
+
+	"modules-left": ["pulseaudio"],
+	"modules-center": [],
+	"modules-right": ["network", "memory", "cpu", "clock"],
+
+	"pulseaudio": {
+		"format": " {volume}%",
+		"format-muted": " muted",
+		"on-click": "pavucontrol",
+		"scroll-step": 5
+	},
+
+	"clock": {
+		"format": "{:%I:%M %p}",
+		"tooltip": true,
+		"tooltip-format": "{:%A, %d %B %Y}"
+	},
+
+	"network": {
+		"format-wifi": " {essid} ({signalStrength}%)",
+		"format-ethernet": " {ipaddr}",
+		"format-disconnected": "⚠ Disconnected",
+		"tooltip": true
+	},
+
+	"memory": {
+		"format": " {}%"
+	},
+
+	"cpu": {
+		"format": " {usage}%"
+	}
+}
