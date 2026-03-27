@@ -1,5 +1,9 @@
 #!/bin/bash
 
+waitprocess() {
+	while pidof -x "$1" > /dev/null 2>&1 ; do sleep 1 ; done
+}
+
 ff() {
 	[ $# -eq 0 ] || find "$1" -type f
 	[ $# -eq 0 ] && find . -type f
