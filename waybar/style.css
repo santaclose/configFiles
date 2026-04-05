@@ -19,3 +19,11 @@ window#waybar {
 #network, #memory, #cpu {
 	padding: 2px 12px 4px 12px
 }
+
+#custom-brightness {
+	padding: 2px 12px 4px 12px;
+}
+
+#custom-power {
+	padding: 2px 12px 4px 12px;
+}

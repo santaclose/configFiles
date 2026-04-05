@@ -2,15 +2,29 @@
 	"layer": "top",
 	"position": "bottom",
 
-	"modules-left": ["pulseaudio"],
+	"modules-left": ["custom/power", "pulseaudio", "custom/brightness"],
 	"modules-center": [],
 	"modules-right": ["network", "memory", "cpu", "clock"],
+
+	"custom/power": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "rofi -dmenu -p 'Power Menu' -mesg 'Select an option:' <<< \"Shutdown\nRestart\" | xargs -I {} sh -c 'case {} in Shutdown) systemctl poweroff ;; Restart) systemctl reboot ;; esac'"
+	},
 
 	"pulseaudio": {
 		"format": " {volume}%",
 		"format-muted": " muted",
 		"on-click": "pavucontrol",
 		"scroll-step": 5
+	},
+
+	"custom/brightness": {
+		"exec": "~/.config/waybar/brightness.sh get",
+		"interval": 2,
+		"on-scroll-up": "sudo ~/.config/waybar/brightness.sh up",
+		"on-scroll-down": "sudo ~/.config/waybar/brightness.sh down",
+		"format": " {}%"
 	},
 
 	"clock": {
