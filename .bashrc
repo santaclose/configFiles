@@ -9,6 +9,35 @@ ff() {
 	[ $# -eq 0 ] && find . -type f
 }
 
+fh() {
+	command=`history | fzf | awk '{$1=""; sub(/^ /, ""); print}'`
+	if [ -n "$command" ] ; then
+		echo "Running: $command"
+		$command
+	fi
+}
+
+7zip() {
+	local target="$1"
+
+	if [[ -d "$target" ]]; then
+		# It's a directory → compress to .zip
+		local name="${target%/}" # remove trailing slash if any
+		local archive="${name}.zip"
+		7z a "$archive" "$name"
+
+	elif [[ -f "$target" ]]; then
+		# It's a file → extract (any supported archive type)
+		local base="${target##*/}" # strip path
+		local outdir="${base%.*}"  # remove last extension
+		7z x "$target" -o"$outdir"
+
+	else
+		echo "Error: '$target' is not a valid file or directory"
+		return 1
+	fi
+}
+
 gitwhat() {
 	git branch -l && git log --oneline -n 10
 }
