@@ -9,7 +9,7 @@
 	"custom/power": {
 		"format": "",
 		"tooltip": false,
-		"on-click": "rofi -dmenu -p 'Power Menu' -mesg 'Select an option:' <<< \"Shutdown\nRestart\" | xargs -I {} sh -c 'case {} in Shutdown) systemctl poweroff ;; Restart) systemctl reboot ;; esac'"
+		"on-click": "printf 'Shutdown\nRestart\n' | rofi -dmenu -p 'Power Menu' -mesg 'Select an option:' | xargs -I {} sh -c 'case \"$1\" in Shutdown) systemctl poweroff ;; Restart) systemctl reboot ;; esac' sh '{}'"
 	},
 
 	"pulseaudio": {
