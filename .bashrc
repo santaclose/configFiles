@@ -24,7 +24,9 @@ fh() {
 		# It's a directory → compress to .zip
 		local name="${target%/}" # remove trailing slash if any
 		local archive="${name}.zip"
-		7z a "$archive" "$name"
+		pushd $name
+		7z a -r ../${archive} *
+		popd
 
 	elif [[ -f "$target" ]]; then
 		# It's a file → extract (any supported archive type)
