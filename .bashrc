@@ -10,10 +10,11 @@ ff() {
 }
 
 fh() {
-	command=`history | fzf | awk '{$1=""; sub(/^ /, ""); print}'`
-	if [ -n "$command" ] ; then
-		echo "Running: $command"
-		$command
+	local cmd
+	cmd=$(history | fzf | sed 's/^[[:space:]]*[0-9]\+[[:space:]]*//')
+	if [ -n "$cmd" ]; then
+		echo "Running: $cmd"
+		eval "$cmd"
 	fi
 }
 
