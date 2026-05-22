@@ -3,14 +3,9 @@
 ------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-	output   = "",
-	mode     = "preferred",
-	position = "auto",
-	scale    = "auto",
-})
+hl.monitor({ output = "DP-1", mode = "preferred", position = "auto", scale = "auto", disabled = false })
 hl.monitor({ output = "DP-2", disabled = true })
-hl.monitor({ output = "DP-3", disabled = true })
+hl.monitor({ output = "DP-3", mode = "1360x768@60.02Hz", disabled = true })
 
 
 ---------------------
@@ -137,6 +132,7 @@ hl.config({
 		disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
 		disable_splash_rendering = true,
 		background_color = "rgb(2a2a2a)",
+		-- disable_autoreload = true
 	},
 })
 
