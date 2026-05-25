@@ -14,7 +14,7 @@ hl.monitor({ output = "DP-3", mode = "1360x768@60.02Hz", disabled = true })
 
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "nautilus"
+local fileManager = "nautilus -w"
 local launcher    = "rofi -show drun"
 local screenshotRegion = "grim -g \"$(slurp)\" - | wl-copy"
 local screenshotMonitor = "grim -o \"$(hyprctl monitors | awk '/Monitor/{mon=$2} /focused: yes/{print mon}')\" - | wl-copy"
