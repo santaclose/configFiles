@@ -10,4 +10,5 @@
 	"show_line_endings": true,
 	"theme": "Default Dark.sublime-theme",
 	"auto_complete": false,
+	"file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", ".directory", "desktop.ini", "*.class", "*.psd", "*.db", "*.sublime-workspace"],
 }
