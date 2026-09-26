@@ -27,3 +27,10 @@ window#waybar {
 #custom-power {
 	padding: 2px 12px 4px 12px;
 }
+
+#custom-invest {
+	color: #888888;
+	font-family: "Fira Code";
+	font-size: 12px;
+	padding: 2px 12px 4px 12px;
+}
