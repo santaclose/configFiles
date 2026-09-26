@@ -3,7 +3,8 @@ import re
 import json
 import requests
 
-JSON_FILE_NAME = "investments.json"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+JSON_FILE_NAME = f"{current_dir}/investments.json"
 
 def get_investments_object():
 	if not os.path.exists(JSON_FILE_NAME):
