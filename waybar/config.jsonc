@@ -4,12 +4,12 @@
 
 	"modules-left": ["custom/power", "pulseaudio", "custom/brightness"],
 	"modules-center": [],
-	"modules-right": ["network", "memory", "cpu", "clock"],
+	"modules-right": ["custom/invest", "network", "memory", "cpu", "clock"],
 
 	"custom/power": {
 		"format": "",
 		"tooltip": false,
-		"on-click": "printf 'Shutdown\nRestart\n' | rofi -dmenu -p 'Power Menu' -mesg 'Select an option:' | xargs -I {} sh -c 'case \"$1\" in Shutdown) systemctl poweroff ;; Restart) systemctl reboot ;; esac' sh '{}'"
+		"on-click": "printf 'Shutdown\nSuspend\nRestart\n' | rofi -dmenu -p 'Power Menu' -mesg 'Select an option:' | xargs -I {} sh -c 'case \"$1\" in Shutdown) systemctl poweroff ;; Suspend) systemctl suspend ;; Restart) systemctl reboot ;; esac' sh '{}'"
 	},
 
 	"pulseaudio": {
@@ -27,8 +27,15 @@
 		"format": " {}%"
 	},
 
+	"custom/invest": {
+		"exec": "python3 ~/.config/waybar/investments.py",
+		"interval": 1800,
+		"format": "{}  ",
+		"tooltip": false
+	},
+
 	"clock": {
-		"format": "{:%I:%M %p}",
+		"format": "{:%Y/%m/%d  %I:%M %p}",
 		"tooltip": true,
 		"tooltip-format": "{:%A, %d %B %Y}"
 	},
